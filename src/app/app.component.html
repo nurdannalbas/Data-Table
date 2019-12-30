@@ -1,0 +1,21 @@
+<div class="container">
+    <textarea style="width:1000px">{{selectedMemberBody}}</textarea>
+
+    <table datatable class="row-border hover"   [dtOptions]="dtOptions">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of item" (click)="rowClickHandler(i)" >
+            <td>{{i.id}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.body}}</td>
+          </tr>
+        
+        </tbody>
+      </table>
+</div>
